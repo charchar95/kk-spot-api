@@ -1,0 +1,340 @@
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "kk_spot_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "kk_spot_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(801745944611653545)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200516160944)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(801745944611653545)[0m
+  [1m[35m (135.5ms)[0m  [1m[35mCREATE DATABASE "kk_spot_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (64.4ms)[0m  [1m[35mCREATE DATABASE "kk_spot_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(801745944611653545)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200516160944)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200516160944"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-16 16:18:50.921055"], ["updated_at", "2020-05-16 16:18:50.921055"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(801745944611653545)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(801745944611653545)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200516160944)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200516160944"]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(801745944611653545)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(801745944611653545)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSongs (20200516164815)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "songs" ("id" bigserial primary key, "name" character varying, "album" character varying, "source" character varying, "favorite" boolean, "genre" character varying, "mood" character varying, "length" integer, "likes" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200516164815"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(801745944611653545)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (10.5ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Agent K.K."], ["album", "https://dodo.ac/np/images/f/fd/AlbumArt-Agent_NH.png"], ["source", "http://acnhapi.com/music/1"], ["genre", "Theme song"], ["mood", "Hard to say"], ["length", 58], ["likes", 0], ["created_at", "2020-05-16 20:41:35.663361"], ["updated_at", "2020-05-16 20:41:35.663361"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Aloha K.K."], ["album", "https://dodo.ac/np/images/thumb/0/07/AlbumArt-Aloha_NH.png/256px-AlbumArt-Aloha_NH.png"], ["source", "http://acnhapi.com/music/2"], ["genre", "Beach"], ["mood", "Lazy"], ["length", 71], ["likes", 0], ["created_at", "2020-05-16 20:41:35.679224"], ["updated_at", "2020-05-16 20:41:35.679224"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bubblegum K.K."], ["album", "https://dodo.ac/np/images/thumb/5/58/AlbumArt-Bubblegum_NH.png/256px-AlbumArt-Bubblegum_NH.png"], ["source", "http://acnhapi.com/music/4"], ["genre", "Love"], ["mood", "Good"], ["length", 58], ["likes", 0], ["created_at", "2020-05-16 20:41:35.682719"], ["updated_at", "2020-05-16 20:41:35.682719"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Animal City"], ["album", "https://dodo.ac/np/images/thumb/f/fb/AlbumArt-AnimalCity.png/280px-AlbumArt-AnimalCity.png"], ["source", "http://acnhapi.com/music/3"], ["genre", "Waltz"], ["mood", "Hard to say"], ["length", 57], ["likes", 0], ["created_at", "2020-05-16 20:41:35.686269"], ["updated_at", "2020-05-16 20:41:35.686269"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.7ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Café K.K."], ["album", "https://dodo.ac/np/images/thumb/b/be/AlbumArt-Caf%C3%A9_NH.png/256px-AlbumArt-Caf%C3%A9_NH.png"], ["source", "http://acnhapi.com/music/5"], ["genre", "Waltz"], ["mood", "Good"], ["length", 78], ["likes", 0], ["created_at", "2020-05-16 20:41:35.691408"], ["updated_at", "2020-05-16 20:41:35.691408"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Comrade K.K."], ["album", "https://dodo.ac/np/images/thumb/4/4a/AlbumArt-Comrade_NH.png/256px-AlbumArt-Comrade_NH.png"], ["source", "http://acnhapi.com/music/6"], ["genre", "Bard music"], ["mood", "Sad"], ["length", 35], ["likes", 0], ["created_at", "2020-05-16 20:41:35.695930"], ["updated_at", "2020-05-16 20:41:35.695930"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "DJ K.K."], ["album", "https://dodo.ac/np/images/thumb/9/96/AlbumArt-DJ_NH.png/256px-AlbumArt-DJ_NH.png"], ["source", "http://acnhapi.com/music/7"], ["genre", "Dance"], ["mood", "Grumpy"], ["length", 48], ["likes", 0], ["created_at", "2020-05-16 20:41:35.698843"], ["updated_at", "2020-05-16 20:41:35.698843"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Drivin'"], ["album", "https://dodo.ac/np/images/thumb/e/ee/AlbumArt-Drivin.png/280px-AlbumArt-Drivin.png"], ["source", "http://acnhapi.com/music/8"], ["genre", "Jazz"], ["mood", "Hard to say"], ["length", 73], ["likes", 0], ["created_at", "2020-05-16 20:41:35.701717"], ["updated_at", "2020-05-16 20:41:35.701717"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Farewell"], ["album", "https://dodo.ac/np/images/thumb/5/5f/AlbumArt-Farewell.png/280px-AlbumArt-Farewell.png"], ["source", "http://acnhapi.com/music/9"], ["genre", "Minimalist"], ["mood", "Hard to say"], ["length", 90], ["likes", 0], ["created_at", "2020-05-16 20:41:35.704976"], ["updated_at", "2020-05-16 20:41:35.704976"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Forest Life"], ["album", "https://dodo.ac/np/images/thumb/1/12/AlbumArt-Forest_NH.png/256px-AlbumArt-Forest_NH.png"], ["source", "http://acnhapi.com/music/10"], ["genre", "Minimalist"], ["mood", "Lazy"], ["length", 36], ["likes", 0], ["created_at", "2020-05-16 20:41:35.708188"], ["updated_at", "2020-05-16 20:41:35.708188"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Go K.K. Rider"], ["album", "https://dodo.ac/np/images/thumb/a/a9/AlbumArt-Rider_NH.png/256px-AlbumArt-Rider_NH.png"], ["source", "http://acnhapi.com/music/11"], ["genre", "Theme song"], ["mood", "Grumpy"], ["length", 47], ["likes", 0], ["created_at", "2020-05-16 20:41:35.711418"], ["updated_at", "2020-05-16 20:41:35.711418"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.2ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hypno K.K."], ["album", "https://dodo.ac/np/images/thumb/7/73/AlbumArt-Hypno_NH.png/256px-AlbumArt-Hypno_NH.png"], ["source", "http://acnhapi.com/music/12"], ["genre", "Minimalist"], ["mood", "Hard to day"], ["length", 78], ["likes", 0], ["created_at", "2020-05-16 20:41:35.714165"], ["updated_at", "2020-05-16 20:41:35.714165"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "I Love You"], ["album", "https://dodo.ac/np/images/thumb/0/0b/AlbumArt-LoveYou_NH.png/256px-AlbumArt-LoveYou_NH.png"], ["source", "http://acnhapi.com/music/13"], ["genre", "Children's music"], ["mood", "Lazy"], ["length", 65], ["likes", 0], ["created_at", "2020-05-16 20:41:35.716984"], ["updated_at", "2020-05-16 20:41:35.716984"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.7ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Imperial K.K."], ["album", "https://dodo.ac/np/images/thumb/2/29/AlbumArt-Imperial_NH.png/256px-AlbumArt-Imperial_NH.png"], ["source", "http://acnhapi.com/music/14"], ["genre", "Folk"], ["mood", "Grumpy"], ["length", 46], ["likes", 0], ["created_at", "2020-05-16 20:41:35.721236"], ["updated_at", "2020-05-16 20:41:35.721236"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Adventure"], ["album", "https://dodo.ac/np/images/thumb/1/13/AlbumArt-Adventure_NH.png/256px-AlbumArt-Adventure_NH.png"], ["source", "http://acnhapi.com/music/15"], ["genre", "Soundtrack"], ["mood", "Grumpy"], ["length", 31], ["likes", 0], ["created_at", "2020-05-16 20:41:35.725635"], ["updated_at", "2020-05-16 20:41:35.725635"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Aria"], ["album", "https://dodo.ac/np/images/thumb/5/5a/AlbumArt-Aria_NH.png/256px-AlbumArt-Aria_NH.png"], ["source", "http://acnhapi.com/music/16"], ["genre", "Classical"], ["mood", "Lazy"], ["length", 80], ["likes", 0], ["created_at", "2020-05-16 20:41:35.729057"], ["updated_at", "2020-05-16 20:41:35.729057"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.2ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Ballad"], ["album", "https://dodo.ac/np/images/thumb/c/c9/AlbumArt-Ballad_NH.png/256px-AlbumArt-Ballad_NH.png"], ["source", "http://acnhapi.com/music/17"], ["genre", "Ballad"], ["mood", "Sad"], ["length", 46], ["likes", 0], ["created_at", "2020-05-16 20:41:35.731915"], ["updated_at", "2020-05-16 20:41:35.731915"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Bazaar"], ["album", "https://dodo.ac/np/images/thumb/a/a0/AlbumArt-Bazaar_NH.png/256px-AlbumArt-Bazaar_NH.png"], ["source", "http://acnhapi.com/music/18"], ["genre", "Folk"], ["mood", "Grumpy"], ["length", 58], ["likes", 0], ["created_at", "2020-05-16 20:41:35.734618"], ["updated_at", "2020-05-16 20:41:35.734618"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Blues"], ["album", "https://dodo.ac/np/images/thumb/e/e2/AlbumArt-Blues_NH.png/256px-AlbumArt-Blues_NH.png"], ["source", "http://acnhapi.com/music/20"], ["genre", "Blues"], ["mood", "Hard to say"], ["length", 40], ["likes", 0], ["created_at", "2020-05-16 20:41:35.745790"], ["updated_at", "2020-05-16 20:41:35.745790"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (1.2ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Birthday"], ["album", "https://dodo.ac/np/images/a/a4/AlbumArt-Birthday_NH.png"], ["source", "http://acnhapi.com/music/19"], ["genre", "American traditional"], ["mood", "Hard to say"], ["length", 86], ["likes", 0], ["created_at", "2020-05-16 20:41:35.749473"], ["updated_at", "2020-05-16 20:41:35.749473"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Bossa"], ["album", "https://dodo.ac/np/images/thumb/a/ae/AlbumArt-Bossa_NH.png/256px-AlbumArt-Bossa_NH.png"], ["source", "http://acnhapi.com/music/21"], ["genre", "Bossa Nova"], ["mood", "Lazy"], ["length", 47], ["likes", 0], ["created_at", "2020-05-16 20:41:35.754573"], ["updated_at", "2020-05-16 20:41:35.754573"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Calypso"], ["album", "https://dodo.ac/np/images/6/61/AlbumArt-Calypso_NH.png"], ["source", "http://acnhapi.com/music/22"], ["genre", "World"], ["mood", "Good"], ["length", 37], ["likes", 0], ["created_at", "2020-05-16 20:41:35.758729"], ["updated_at", "2020-05-16 20:41:35.758729"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Casbah"], ["album", "https://dodo.ac/np/images/thumb/2/26/AlbumArt-Casbah_NH.png/256px-AlbumArt-Casbah_NH.png"], ["source", "http://acnhapi.com/music/23"], ["genre", "World"], ["mood", "Grumpy"], ["length", 67], ["likes", 0], ["created_at", "2020-05-16 20:41:35.761870"], ["updated_at", "2020-05-16 20:41:35.761870"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Chorale"], ["album", "https://dodo.ac/np/images/3/32/AlbumArt-Chorale_NH.png"], ["source", "http://acnhapi.com/music/24"], ["genre", "Classical"], ["mood", "Sad"], ["length", 45], ["likes", 0], ["created_at", "2020-05-16 20:41:35.764823"], ["updated_at", "2020-05-16 20:41:35.764823"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Condor"], ["album", "https://dodo.ac/np/images/thumb/7/70/AlbumArt-Condor_NH.png/256px-AlbumArt-Condor_NH.png"], ["source", "http://acnhapi.com/music/25"], ["genre", "Folk"], ["mood", "Sad"], ["length", 54], ["likes", 0], ["created_at", "2020-05-16 20:41:35.767781"], ["updated_at", "2020-05-16 20:41:35.767781"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Country"], ["album", "https://dodo.ac/np/images/thumb/c/c3/AlbumArt-Country_NH.png/256px-AlbumArt-Country_NH.png"], ["source", "http://acnhapi.com/music/26"], ["genre", "Country"], ["mood", "Good"], ["length", 48], ["likes", 0], ["created_at", "2020-05-16 20:41:35.771161"], ["updated_at", "2020-05-16 20:41:35.771161"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Cruisin'"], ["album", "https://dodo.ac/np/images/1/14/AlbumArt-Cruisin_NH.png"], ["source", "http://acnhapi.com/music/27"], ["genre", "G-Funk"], ["mood", "Grumpy"], ["length", 67], ["likes", 0], ["created_at", "2020-05-16 20:41:35.774182"], ["updated_at", "2020-05-16 20:41:35.774182"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. D&B"], ["album", "https://dodo.ac/np/images/thumb/c/cb/AlbumArt-DnB_NH.png/256px-AlbumArt-DnB_NH.png"], ["source", "http://acnhapi.com/music/28"], ["genre", "Dance"], ["mood", "Hard to say"], ["length", 67], ["likes", 0], ["created_at", "2020-05-16 20:41:35.777321"], ["updated_at", "2020-05-16 20:41:35.777321"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Dirge"], ["album", "https://dodo.ac/np/images/thumb/f/f1/AlbumArt-Dirge_NH.png/256px-AlbumArt-Dirge_NH.png"], ["source", "http://acnhapi.com/music/29"], ["genre", "Ambient"], ["mood", "Sad"], ["length", 81], ["likes", 0], ["created_at", "2020-05-16 20:41:35.780400"], ["updated_at", "2020-05-16 20:41:35.780400"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Disco"], ["album", "https://dodo.ac/np/images/thumb/3/36/AlbumArt-Disco_NH.png/256px-AlbumArt-Disco_NH.png"], ["source", "http://acnhapi.com/music/30"], ["genre", "Disco"], ["mood", "Good"], ["length", 51], ["likes", 0], ["created_at", "2020-05-16 20:41:35.784501"], ["updated_at", "2020-05-16 20:41:35.784501"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Dixie"], ["album", "https://dodo.ac/np/images/thumb/0/04/AlbumArt-Dixie_NH.png/256px-AlbumArt-Dixie_NH.png"], ["source", "http://acnhapi.com/music/31"], ["genre", "World"], ["mood", "Good"], ["length", 31], ["likes", 0], ["created_at", "2020-05-16 20:41:35.788875"], ["updated_at", "2020-05-16 20:41:35.788875"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Faire"], ["album", "https://dodo.ac/np/images/thumb/1/15/AlbumArt-Faire_NH.png/256px-AlbumArt-Faire_NH.png"], ["source", "http://acnhapi.com/music/33"], ["genre", "Folk"], ["mood", "Lazy"], ["length", 42], ["likes", 0], ["created_at", "2020-05-16 20:41:35.791983"], ["updated_at", "2020-05-16 20:41:35.791983"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Flamenco"], ["album", "https://dodo.ac/np/images/thumb/d/d0/AlbumArt-Flamenco_NH.png/256px-AlbumArt-Flamenco_NH.png"], ["source", "http://acnhapi.com/music/34"], ["genre", "World"], ["mood", "Grumpy"], ["length", 32], ["likes", 0], ["created_at", "2020-05-16 20:41:35.794992"], ["updated_at", "2020-05-16 20:41:35.794992"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (1.9ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Folk"], ["album", "https://dodo.ac/np/images/thumb/5/57/AlbumArt-Folk_NH.png/256px-AlbumArt-Folk_NH.png"], ["source", "http://acnhapi.com/music/35"], ["genre", "Folk"], ["mood", "Hard to say"], ["length", 60], ["likes", 0], ["created_at", "2020-05-16 20:41:35.798068"], ["updated_at", "2020-05-16 20:41:35.798068"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Fusion"], ["album", "https://dodo.ac/np/images/thumb/1/1b/AlbumArt-Fusion_NH.png/256px-AlbumArt-Fusion_NH.png"], ["source", "http://acnhapi.com/music/36"], ["genre", "Electronic"], ["mood", "Lazy"], ["length", 98], ["likes", 0], ["created_at", "2020-05-16 20:41:35.803006"], ["updated_at", "2020-05-16 20:41:35.803006"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Groove"], ["album", "https://dodo.ac/np/images/thumb/2/29/AlbumArt-Groove_NH.png/256px-AlbumArt-Groove_NH.png"], ["source", "http://acnhapi.com/music/37"], ["genre", "Funk"], ["mood", "Good"], ["length", 62], ["likes", 0], ["created_at", "2020-05-16 20:41:35.806144"], ["updated_at", "2020-05-16 20:41:35.806144"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Gumbo"], ["album", "https://dodo.ac/np/images/thumb/d/df/AlbumArt-Gumbo_NH.png/256px-AlbumArt-Gumbo_NH.png"], ["source", "http://acnhapi.com/music/38"], ["genre", "Jazz"], ["mood", "Hard to say"], ["length", 47], ["likes", 0], ["created_at", "2020-05-16 20:41:35.809743"], ["updated_at", "2020-05-16 20:41:35.809743"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. House"], ["album", "https://dodo.ac/np/images/thumb/5/58/AlbumArt-House_NH.png/256px-AlbumArt-House_NH.png"], ["source", "http://acnhapi.com/music/39"], ["genre", "House"], ["mood", "Grumpy"], ["length", 56], ["likes", 0], ["created_at", "2020-05-16 20:41:35.823005"], ["updated_at", "2020-05-16 20:41:35.823005"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (1.1ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Island"], ["album", "https://dodo.ac/np/images/thumb/d/d1/AlbumArt-Island_NH.png/256px-AlbumArt-Island_NH.png"], ["source", "http://acnhapi.com/music/40"], ["genre", "Beach"], ["mood", "Hard to say"], ["length", 43], ["likes", 0], ["created_at", "2020-05-16 20:41:35.826148"], ["updated_at", "2020-05-16 20:41:35.826148"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Jazz"], ["album", "https://dodo.ac/np/images/thumb/0/0c/AlbumArt-Jazz_NH.png/256px-AlbumArt-Jazz_NH.png"], ["source", "http://acnhapi.com/music/41"], ["genre", "World"], ["mood", "Lazy"], ["length", 66], ["likes", 0], ["created_at", "2020-05-16 20:41:35.830258"], ["updated_at", "2020-05-16 20:41:35.830258"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.2ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Jongara"], ["album", "https://dodo.ac/np/images/thumb/3/39/AlbumArt-Jongara_NH.png/256px-AlbumArt-Jongara_NH.png"], ["source", "http://acnhapi.com/music/42"], ["genre", "Jongara"], ["mood", "Grumpy"], ["length", 34], ["likes", 0], ["created_at", "2020-05-16 20:41:35.832994"], ["updated_at", "2020-05-16 20:41:35.832994"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Lament"], ["album", "https://dodo.ac/np/images/thumb/3/39/AlbumArt-Lament_NH.png/256px-AlbumArt-Lament_NH.png"], ["source", "http://acnhapi.com/music/43"], ["genre", "Enka"], ["mood", "Sad"], ["length", 56], ["likes", 0], ["created_at", "2020-05-16 20:41:35.836364"], ["updated_at", "2020-05-16 20:41:35.836364"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Love Song"], ["album", "https://dodo.ac/np/images/thumb/2/2e/AlbumArt-LoveSong_NH.png/256px-AlbumArt-LoveSong_NH.png"], ["source", "http://acnhapi.com/music/44"], ["genre", "Love"], ["mood", "Lazy"], ["length", 77], ["likes", 0], ["created_at", "2020-05-16 20:41:35.839474"], ["updated_at", "2020-05-16 20:41:35.839474"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Lullaby"], ["album", "https://dodo.ac/np/images/thumb/b/b3/AlbumArt-Lullaby_NH.png/256px-AlbumArt-Lullaby_NH.png"], ["source", "http://acnhapi.com/music/45"], ["genre", "Love"], ["mood", "Sad"], ["length", 106], ["likes", 0], ["created_at", "2020-05-16 20:41:35.842432"], ["updated_at", "2020-05-16 20:41:35.842432"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Mambo"], ["album", "https://dodo.ac/np/images/thumb/8/83/AlbumArt-Mambo_NH.png/256px-AlbumArt-Mambo_NH.png"], ["source", "http://acnhapi.com/music/46"], ["genre", "World"], ["mood", "Good"], ["length", 51], ["likes", 0], ["created_at", "2020-05-16 20:41:35.846459"], ["updated_at", "2020-05-16 20:41:35.846459"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Marathon"], ["album", "https://dodo.ac/np/images/thumb/5/52/AlbumArt-Marathon_NH.png/256px-AlbumArt-Marathon_NH.png"], ["source", "http://acnhapi.com/music/47"], ["genre", "World"], ["mood", "Hard to say"], ["length", 46], ["likes", 0], ["created_at", "2020-05-16 20:41:35.851088"], ["updated_at", "2020-05-16 20:41:35.851088"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. March"], ["album", "https://dodo.ac/np/images/thumb/e/ed/AlbumArt-March_NH.png/256px-AlbumArt-March_NH.png"], ["source", "http://acnhapi.com/music/48"], ["genre", "March"], ["mood", "Good"], ["length", 30], ["likes", 0], ["created_at", "2020-05-16 20:41:35.854431"], ["updated_at", "2020-05-16 20:41:35.854431"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Mariachi"], ["album", "https://dodo.ac/np/images/thumb/7/73/AlbumArt-Mariachi_NH.png/256px-AlbumArt-Mariachi_NH.png"], ["source", "http://acnhapi.com/music/49"], ["genre", "World"], ["mood", "Good"], ["length", 48], ["likes", 0], ["created_at", "2020-05-16 20:41:35.857332"], ["updated_at", "2020-05-16 20:41:35.857332"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Metal"], ["album", "https://dodo.ac/np/images/thumb/8/89/AlbumArt-Metal_NH.png/256px-AlbumArt-Metal_NH.png"], ["source", "http://acnhapi.com/music/50"], ["genre", "Rock"], ["mood", "Grumpy"], ["length", 38], ["likes", 0], ["created_at", "2020-05-16 20:41:35.860428"], ["updated_at", "2020-05-16 20:41:35.860428"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Milonga"], ["album", "https://dodo.ac/np/images/thumb/3/38/AlbumArt-Milonga_NH.png/256px-AlbumArt-Milonga_NH.png"], ["source", "http://acnhapi.com/music/51"], ["genre", "World"], ["mood", "Sad"], ["length", 54], ["likes", 0], ["created_at", "2020-05-16 20:41:35.863499"], ["updated_at", "2020-05-16 20:41:35.863499"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Moody"], ["album", "https://dodo.ac/np/images/thumb/3/30/AlbumArt-Moody_NH.png/256px-AlbumArt-Moody_NH.png"], ["source", "http://acnhapi.com/music/52"], ["genre", "World"], ["mood", "Sad"], ["length", 80], ["likes", 0], ["created_at", "2020-05-16 20:41:35.866529"], ["updated_at", "2020-05-16 20:41:35.866529"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Oasis"], ["album", "https://dodo.ac/np/images/thumb/e/e7/AlbumArt-Oasis_NH.png/256px-AlbumArt-Oasis_NH.png"], ["source", "http://acnhapi.com/music/53"], ["genre", "Beach"], ["mood", "Hard to say"], ["length", 51], ["likes", 0], ["created_at", "2020-05-16 20:41:35.869818"], ["updated_at", "2020-05-16 20:41:35.869818"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.2ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Parade"], ["album", "https://dodo.ac/np/images/thumb/f/f6/AlbumArt-Parade_NH.png/256px-AlbumArt-Parade_NH.png"], ["source", "http://acnhapi.com/music/54"], ["genre", "March"], ["mood", "Good"], ["length", 58], ["likes", 0], ["created_at", "2020-05-16 20:41:35.872799"], ["updated_at", "2020-05-16 20:41:35.872799"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Ragtime"], ["album", "https://dodo.ac/np/images/thumb/e/e8/AlbumArt-Ragtime_NH.png/256px-AlbumArt-Ragtime_NH.png"], ["source", "http://acnhapi.com/music/55"], ["genre", "Ragtime"], ["mood", "Good"], ["length", 39], ["likes", 0], ["created_at", "2020-05-16 20:41:35.875624"], ["updated_at", "2020-05-16 20:41:35.875624"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Rally"], ["album", "https://dodo.ac/np/images/thumb/4/43/AlbumArt-Rally_NH.png/256px-AlbumArt-Rally_NH.png"], ["source", "http://acnhapi.com/music/56"], ["genre", "Fold"], ["mood", "Hard to Say"], ["length", 54], ["likes", 0], ["created_at", "2020-05-16 20:41:35.878931"], ["updated_at", "2020-05-16 20:41:35.878931"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Reggae"], ["album", "https://dodo.ac/np/images/thumb/b/b2/AlbumArt-Reggae_NH.png/256px-AlbumArt-Reggae_NH.png"], ["source", "http://acnhapi.com/music/57"], ["genre", "World"], ["mood", "Lazy"], ["length", 48], ["likes", 0], ["created_at", "2020-05-16 20:41:35.889191"], ["updated_at", "2020-05-16 20:41:35.889191"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Rock"], ["album", "https://dodo.ac/np/images/thumb/3/3a/AlbumArt-Rock_NH.png/256px-AlbumArt-Rock_NH.png"], ["source", "http://acnhapi.com/music/58"], ["genre", "Rock"], ["mood", "Grumpy"], ["length", 35], ["likes", 0], ["created_at", "2020-05-16 20:41:35.893548"], ["updated_at", "2020-05-16 20:41:35.893548"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Rockabilly"], ["album", "https://dodo.ac/np/images/thumb/0/0d/AlbumArt-Rockabilly_NH.png/256px-AlbumArt-Rockabilly_NH.png"], ["source", "http://acnhapi.com/music/59"], ["genre", "Rock"], ["mood", "Good"], ["length", 50], ["likes", 0], ["created_at", "2020-05-16 20:41:35.897368"], ["updated_at", "2020-05-16 20:41:35.897368"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Safari"], ["album", "https://dodo.ac/np/images/thumb/f/f9/AlbumArt-Safari_NH.png/256px-AlbumArt-Safari_NH.png"], ["source", "http://acnhapi.com/music/60"], ["genre", "World"], ["mood", "Grumpy"], ["length", 72], ["likes", 0], ["created_at", "2020-05-16 20:41:35.900231"], ["updated_at", "2020-05-16 20:41:35.900231"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Salsa"], ["album", "https://dodo.ac/np/images/thumb/5/5f/AlbumArt-Salsa_NH.png/256px-AlbumArt-Salsa_NH.png"], ["source", "http://acnhapi.com/music/61"], ["genre", "World"], ["mood", "Good"], ["length", 70], ["likes", 0], ["created_at", "2020-05-16 20:41:35.903337"], ["updated_at", "2020-05-16 20:41:35.903337"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Samba"], ["album", "https://dodo.ac/np/images/thumb/a/a0/AlbumArt-Samba_NH.png/256px-AlbumArt-Samba_NH.png"], ["source", "http://acnhapi.com/music/62"], ["genre", "Dance"], ["mood", "Good"], ["length", 64], ["likes", 0], ["created_at", "2020-05-16 20:41:35.906172"], ["updated_at", "2020-05-16 20:41:35.906172"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Ska"], ["album", "https://dodo.ac/np/images/thumb/0/06/AlbumArt-Ska_NH.png/256px-AlbumArt-Ska_NH.png"], ["source", "http://acnhapi.com/music/63"], ["genre", "Rock"], ["mood", "Good"], ["length", 40], ["likes", 0], ["created_at", "2020-05-16 20:41:35.909128"], ["updated_at", "2020-05-16 20:41:35.909128"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Sonata"], ["album", "https://dodo.ac/np/images/thumb/f/f2/AlbumArt-Sonata_NH.png/256px-AlbumArt-Sonata_NH.png"], ["source", "http://acnhapi.com/music/64"], ["genre", "Classical"], ["mood", "Sad"], ["length", 68], ["likes", 0], ["created_at", "2020-05-16 20:41:35.912410"], ["updated_at", "2020-05-16 20:41:35.912410"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.2ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Song"], ["album", "https://dodo.ac/np/images/thumb/0/03/AlbumArt-Song_NH.png/256px-AlbumArt-Song_NH.png"], ["source", "http://acnhapi.com/music/65"], ["genre", "Minimalist"], ["mood", "Hard to say"], ["length", 26], ["likes", 0], ["created_at", "2020-05-16 20:41:35.915240"], ["updated_at", "2020-05-16 20:41:35.915240"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Soul"], ["album", "https://dodo.ac/np/images/thumb/7/79/AlbumArt-Soul_NH.png/256px-AlbumArt-Soul_NH.png"], ["source", "http://acnhapi.com/music/66"], ["genre", "World"], ["mood", "Hard to say"], ["length", 77], ["likes", 0], ["created_at", "2020-05-16 20:41:35.918377"], ["updated_at", "2020-05-16 20:41:35.918377"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Steppe"], ["album", "https://dodo.ac/np/images/thumb/7/77/AlbumArt-Steppe_NH.png/256px-AlbumArt-Steppe_NH.png"], ["source", "http://acnhapi.com/music/67"], ["genre", "World"], ["mood", "Grumpy"], ["length", 66], ["likes", 0], ["created_at", "2020-05-16 20:41:35.923153"], ["updated_at", "2020-05-16 20:41:35.923153"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Stroll"], ["album", "https://dodo.ac/np/images/thumb/4/4c/AlbumArt-Stroll_NH.png/256px-AlbumArt-Stroll_NH.png"], ["source", "http://acnhapi.com/music/68"], ["genre", "Stroll"], ["mood", "Good"], ["length", 105], ["likes", 0], ["created_at", "2020-05-16 20:41:35.927241"], ["updated_at", "2020-05-16 20:41:35.927241"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Swing"], ["album", "https://dodo.ac/np/images/thumb/1/1d/AlbumArt-Swing_NH.png/256px-AlbumArt-Swing_NH.png"], ["source", "http://acnhapi.com/music/69"], ["genre", "Swing"], ["mood", "Lazy"], ["length", 45], ["likes", 0], ["created_at", "2020-05-16 20:41:35.930837"], ["updated_at", "2020-05-16 20:41:35.930837"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Synth"], ["album", "https://dodo.ac/np/images/thumb/c/c3/AlbumArt-Synth_NH.png/256px-AlbumArt-Synth_NH.png"], ["source", "http://acnhapi.com/music/70"], ["genre", "Ambient"], ["mood", "Lazy"], ["length", 86], ["likes", 0], ["created_at", "2020-05-16 20:41:35.933600"], ["updated_at", "2020-05-16 20:41:35.933600"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Tango"], ["album", "https://dodo.ac/np/images/thumb/2/23/AlbumArt-Tango_NH.png/256px-AlbumArt-Tango_NH.png"], ["source", "http://acnhapi.com/music/71"], ["genre", "World"], ["mood", "Grumpy"], ["length", 33], ["likes", 0], ["created_at", "2020-05-16 20:41:35.936649"], ["updated_at", "2020-05-16 20:41:35.936649"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Technopop"], ["album", "https://dodo.ac/np/images/thumb/9/98/AlbumArt-Technopop_NH.png/256px-AlbumArt-Technopop_NH.png"], ["source", "http://acnhapi.com/music/72"], ["genre", "Dance"], ["mood", "Good"], ["length", 66], ["likes", 0], ["created_at", "2020-05-16 20:41:35.939635"], ["updated_at", "2020-05-16 20:41:35.939635"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Waltz"], ["album", "https://dodo.ac/np/images/thumb/b/b5/AlbumArt-Waltz_NH.png/256px-AlbumArt-Waltz_NH.png"], ["source", "http://acnhapi.com/music/73"], ["genre", "Waltz"], ["mood", "Sad"], ["length", 44], ["likes", 0], ["created_at", "2020-05-16 20:41:35.942504"], ["updated_at", "2020-05-16 20:41:35.942504"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Western"], ["album", "https://dodo.ac/np/images/thumb/e/ed/AlbumArt-Western_NH.png/256px-AlbumArt-Western_NH.png"], ["source", "http://acnhapi.com/music/74"], ["genre", "World"], ["mood", "Sad"], ["length", 50], ["likes", 0], ["created_at", "2020-05-16 20:41:35.952355"], ["updated_at", "2020-05-16 20:41:35.952355"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "K.K. Étude"], ["album", "https://dodo.ac/np/images/thumb/5/55/AlbumArt-Etude_NH.png/256px-AlbumArt-Etude_NH.png"], ["source", "http://acnhapi.com/music/32"], ["genre", "Classical"], ["mood", "Sad"], ["length", 48], ["likes", 0], ["created_at", "2020-05-16 20:41:35.956661"], ["updated_at", "2020-05-16 20:41:35.956661"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "King K.K."], ["album", "https://dodo.ac/np/images/thumb/f/fa/AlbumArt-King_NH.png/256px-AlbumArt-King_NH.png"], ["source", "http://acnhapi.com/music/75"], ["genre", "Ballad"], ["mood", "Sad"], ["length", 66], ["likes", 0], ["created_at", "2020-05-16 20:41:35.959742"], ["updated_at", "2020-05-16 20:41:35.959742"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Lucky K.K."], ["album", "https://dodo.ac/np/images/thumb/6/62/AlbumArt-Lucky_NH.png/256px-AlbumArt-Lucky_NH.png"], ["source", "http://acnhapi.com/music/76"], ["genre", "World"], ["mood", "Grumpy"], ["length", 65], ["likes", 0], ["created_at", "2020-05-16 20:41:35.962925"], ["updated_at", "2020-05-16 20:41:35.962925"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Marine Song 2001"], ["album", "https://dodo.ac/np/images/thumb/e/eb/AlbumArt-Marine_NH.png/256px-AlbumArt-Marine_NH.png"], ["source", "http://acnhapi.com/music/77"], ["genre", "Beach"], ["mood", "Lazy"], ["length", 230], ["likes", 0], ["created_at", "2020-05-16 20:41:35.965849"], ["updated_at", "2020-05-16 20:41:35.965849"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mountain Song"], ["album", "https://dodo.ac/np/images/thumb/2/28/AlbumArt-Mountain_NH.png/256px-AlbumArt-Mountain_NH.png"], ["source", "http://acnhapi.com/music/78"], ["genre", "Ballad"], ["mood", "Good"], ["length", 36], ["likes", 0], ["created_at", "2020-05-16 20:41:35.969281"], ["updated_at", "2020-05-16 20:41:35.969281"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mr. K.K."], ["album", "https://dodo.ac/np/images/thumb/e/e3/AlbumArt-Mr_NH.png/256px-AlbumArt-Mr_NH.png"], ["source", "http://acnhapi.com/music/79"], ["genre", "Ballad"], ["mood", "Lazy"], ["length", 61], ["likes", 0], ["created_at", "2020-05-16 20:41:35.972477"], ["updated_at", "2020-05-16 20:41:35.972477"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "My Place"], ["album", "https://dodo.ac/np/images/thumb/a/a0/AlbumArt-MyPlace_NH.png/256px-AlbumArt-MyPlace_NH.png"], ["source", "http://acnhapi.com/music/80"], ["genre", "Ballad"], ["mood", "Lazy"], ["length", 46], ["likes", 0], ["created_at", "2020-05-16 20:41:35.975212"], ["updated_at", "2020-05-16 20:41:35.975212"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Neapolitan"], ["album", "https://dodo.ac/np/images/thumb/3/38/AlbumArt-Neapolitan_NH.png/256px-AlbumArt-Neapolitan_NH.png"], ["source", "http://acnhapi.com/music/81"], ["genre", "Ballad"], ["mood", "Good"], ["length", 57], ["likes", 0], ["created_at", "2020-05-16 20:41:35.978477"], ["updated_at", "2020-05-16 20:41:35.978477"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Only Me"], ["album", "https://dodo.ac/np/images/thumb/d/d9/AlbumArt-OnlyMe_NH.png/256px-AlbumArt-OnlyMe_NH.png"], ["source", "http://acnhapi.com/music/82"], ["genre", "Ballad"], ["mood", "Sad"], ["length", 58], ["likes", 0], ["created_at", "2020-05-16 20:41:35.982404"], ["updated_at", "2020-05-16 20:41:35.982404"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Pondering"], ["album", "https://dodo.ac/np/images/thumb/7/7b/AlbumArt-Pondering_NH.png/256px-AlbumArt-Pondering_NH.png"], ["source", "http://acnhapi.com/music/83"], ["genre", "Ballad"], ["mood", "Lazy"], ["length", 52], ["likes", 0], ["created_at", "2020-05-16 20:41:35.986893"], ["updated_at", "2020-05-16 20:41:35.986893"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Rockin' K.K."], ["album", "https://dodo.ac/np/images/thumb/f/fb/AlbumArt-Rockin_NH.png/256px-AlbumArt-Rockin_NH.png"], ["source", "http://acnhapi.com/music/84"], ["genre", "Rock"], ["mood", "Grumpy"], ["length", 46], ["likes", 0], ["created_at", "2020-05-16 20:41:35.990402"], ["updated_at", "2020-05-16 20:41:35.990402"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Soulful K.K."], ["album", "https://dodo.ac/np/images/thumb/3/36/AlbumArt-Soulful_NH.png/256px-AlbumArt-Soulful_NH.png"], ["source", "http://acnhapi.com/music/85"], ["genre", "Soul"], ["mood", "Lazy"], ["length", 75], ["likes", 0], ["created_at", "2020-05-16 20:41:35.993296"], ["updated_at", "2020-05-16 20:41:35.993296"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Space K.K."], ["album", "https://dodo.ac/np/images/thumb/b/bd/AlbumArt-Space_NH.png/256px-AlbumArt-Space_NH.png"], ["source", "http://acnhapi.com/music/86"], ["genre", "Minimalist"], ["mood", "Hard to say"], ["length", 53], ["likes", 0], ["created_at", "2020-05-16 20:41:35.996629"], ["updated_at", "2020-05-16 20:41:35.996629"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Spring Blossoms"], ["album", "https://dodo.ac/np/images/thumb/3/3b/AlbumArt-Blossoms_NH.png/256px-AlbumArt-Blossoms_NH.png"], ["source", "http://acnhapi.com/music/87"], ["genre", "Folk"], ["mood", "Good"], ["length", 44], ["likes", 0], ["created_at", "2020-05-16 20:41:35.999591"], ["updated_at", "2020-05-16 20:41:35.999591"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Stale Cupcakes"], ["album", "https://dodo.ac/np/images/thumb/e/ef/AlbumArt-Cupcakes_NH.png/256px-AlbumArt-Cupcakes_NH.png"], ["source", "http://acnhapi.com/music/88"], ["genre", "Ballad"], ["mood", "Sad"], ["length", 79], ["likes", 0], ["created_at", "2020-05-16 20:41:36.002776"], ["updated_at", "2020-05-16 20:41:36.002776"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Steep Hill"], ["album", "https://dodo.ac/np/images/thumb/e/eb/AlbumArt-Steep_NH.png/256px-AlbumArt-Steep_NH.png"], ["source", "http://acnhapi.com/music/89"], ["genre", "Ballad"], ["mood", "Sad"], ["length", 78], ["likes", 0], ["created_at", "2020-05-16 20:41:36.005925"], ["updated_at", "2020-05-16 20:41:36.005925"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Surfin' K.K."], ["album", "https://dodo.ac/np/images/thumb/9/9c/AlbumArt-Surfin_NH.png/256px-AlbumArt-Surfin_NH.png"], ["source", "http://acnhapi.com/music/90"], ["genre", "Beach"], ["mood", "Grumpy"], ["length", 33], ["likes", 0], ["created_at", "2020-05-16 20:41:36.008824"], ["updated_at", "2020-05-16 20:41:36.008824"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "The K. Funk"], ["album", "https://dodo.ac/np/images/thumb/6/64/AlbumArt-Funk_NH.png/256px-AlbumArt-Funk_NH.png"], ["source", "http://acnhapi.com/music/91"], ["genre", "Funk"], ["mood", "Hard to say"], ["length", 48], ["likes", 0], ["created_at", "2020-05-16 20:41:36.021051"], ["updated_at", "2020-05-16 20:41:36.021051"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "To the Edge"], ["album", "https://dodo.ac/np/images/thumb/f/ff/AlbumArt-Edge_NH.png/256px-AlbumArt-Edge_NH.png"], ["source", "http://acnhapi.com/music/92"], ["genre", "Ballad"], ["mood", "Hard to Say"], ["length", 67], ["likes", 0], ["created_at", "2020-05-16 20:41:36.024018"], ["updated_at", "2020-05-16 20:41:36.024018"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Two Days Ago"], ["album", "https://dodo.ac/np/images/thumb/3/30/AlbumArt-TwoDays_NH.png/256px-AlbumArt-TwoDays_NH.png"], ["source", "http://acnhapi.com/music/93"], ["genre", "Ballad"], ["mood", "Sad"], ["length", 70], ["likes", 0], ["created_at", "2020-05-16 20:41:36.026942"], ["updated_at", "2020-05-16 20:41:36.026942"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Wandering"], ["album", "https://dodo.ac/np/images/thumb/c/cc/AlbumArt-Wandering_NH.png/256px-AlbumArt-Wandering_NH.png"], ["source", "http://acnhapi.com/music/94"], ["genre", "Ballad"], ["mood", "Lazy"], ["length", 39], ["likes", 0], ["created_at", "2020-05-16 20:41:36.030251"], ["updated_at", "2020-05-16 20:41:36.030251"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("name", "album", "source", "genre", "mood", "length", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Welcome Horizons"], ["album", "https://dodo.ac/np/images/thumb/1/1d/AlbumArt-WelcomeHorizons.png/280px-AlbumArt-WelcomeHorizons.png"], ["source", "http://acnhapi.com/music/95"], ["genre", "World"], ["mood", "Hard to say"], ["length", 85], ["likes", 0], ["created_at", "2020-05-16 20:41:36.033092"], ["updated_at", "2020-05-16 20:41:36.033092"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "songs"[0m
