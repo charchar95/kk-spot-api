@@ -22279,3 +22279,87 @@ Processing by SongsController#index as */*
 Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.6ms | Allocations: 18901)
 
 
+Started GET "/songs" for ::1 at 2020-05-25 14:08:14 -0700
+Processing by SongsController#index as */*
+  [1m[36mSong Load (1.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 1.1ms | Allocations: 26221)
+
+
+Started GET "/songs/1" for ::1 at 2020-05-25 14:08:17 -0700
+Processing by SongsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:44:in `set_song'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 969)
+
+
+Started GET "/songs/2" for ::1 at 2020-05-25 14:08:28 -0700
+Processing by SongsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:44:in `set_song'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 833)
+
+
+Started GET "/songs" for ::1 at 2020-05-25 14:08:33 -0700
+Processing by SongsController#index as */*
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.5ms | Allocations: 18898)
+
+
+Started GET "/songs" for ::1 at 2020-05-26 11:40:03 -0700
+Processing by SongsController#index as */*
+  [1m[36mSong Load (2.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+Completed 200 OK in 62ms (Views: 52.8ms | ActiveRecord: 2.9ms | Allocations: 18986)
+
+
+Started GET "/songs/1" for ::1 at 2020-05-26 11:45:23 -0700
+Processing by SongsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (2.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:44:in `set_song'
+Completed 200 OK in 25ms (Views: 1.1ms | ActiveRecord: 5.1ms | Allocations: 861)
+
+
+Started GET "/songs/2" for ::1 at 2020-05-26 11:45:25 -0700
+Processing by SongsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:44:in `set_song'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 833)
+
+
+Started GET "/songs/5" for ::1 at 2020-05-26 11:45:26 -0700
+Processing by SongsController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:44:in `set_song'
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 833)
+
+
+Started GET "/songs" for ::1 at 2020-05-26 11:47:36 -0700
+Processing by SongsController#index as */*
+  [1m[36mSong Load (2.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+Completed 200 OK in 270ms (Views: 264.2ms | ActiveRecord: 2.5ms | Allocations: 18901)
+
+
+Started GET "/songs/1" for ::1 at 2020-05-26 11:47:39 -0700
+Processing by SongsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:44:in `set_song'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 834)
+
+
+Started GET "/songs/1" for ::1 at 2020-05-26 11:47:40 -0700
+Processing by SongsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:44:in `set_song'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 833)
+
+
